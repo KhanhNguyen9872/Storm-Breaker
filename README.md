@@ -41,7 +41,7 @@
 
 
 ```bash
-$ git clone https://github.com/ultrasecurity/Storm-Breaker
+$ git clone https://github.com/KhanhNguyen9872/Storm-Breaker
 $ cd Storm-Breaker
 $ sudo bash linux-installer.sh
 $ python3 -m pip install -r requirments.txt
